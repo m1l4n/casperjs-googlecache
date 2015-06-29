@@ -49,6 +49,7 @@ casper.then(function() {
         }
         original.push(default_data[i]);
     }
+    console.log('Node app is running');
 });
 
 

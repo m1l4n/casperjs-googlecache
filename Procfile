@@ -1,1 +1,1 @@
-web: node index.js
+web: casperjs app.js
