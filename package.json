@@ -7,10 +7,11 @@
     "start": "casperjs app.js"
   },
   "dependencies": {
+    "casperjs": "^1.1.0-beta3",
     "ejs": "^2.3.1",
     "express": "~4.9.x",
     "phantomjs": "1.9.17",
-    "casperjs": "^1.1.0-beta3"
+    "spooky": "^0.2.5"
   },
   "engines": {
     "node": "0.12.2"
