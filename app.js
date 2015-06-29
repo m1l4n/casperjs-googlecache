@@ -1,4 +1,10 @@
 var casper = require('casper').create();
+var fs = require('fs');
+var utils = require('utils');
+var fname = 'results.csv';
+var save = fs.pathJoin(fs.workingDirectory, '', fname);
+var dname = 'defaults.txt';
+var dsave = fs.pathJoin(fs.workingDirectory, '', dname);
 
 var urls = [
     'http://www.markiza.sk/uvod',
