@@ -1,4 +1,4 @@
-alert('hello');
+console.log('hello');
 // var casper = require('casper').create();
 // var fs = require('fs');
 // var utils = require('utils');
