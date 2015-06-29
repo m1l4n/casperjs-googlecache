@@ -2,15 +2,13 @@
   "name": "node-js-getting-started",
   "version": "0.1.4",
   "description": "A sample Node.js app using Express 4",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node app.js"
   },
   "dependencies": {
     "ejs": "^2.3.1",
-    "express": "~4.9.x"
-  },
-  "devDependencies": {
+    "express": "~4.9.x",
     "phantomjs": "1.9.17",
     "casperjs": "^1.1.0-beta3"
   },
