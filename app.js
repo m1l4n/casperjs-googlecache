@@ -2,32 +2,13 @@
 var express = require('express');
 var app = express();
 
-var original = [];
-var changed_cache = [];
-var changed_url = [];
+casper.start();
 
-app.set('port', (process.env.PORT || 5000));
-
-// casper.start();
-
-// casper.then(function() {
-//     this.thenOpen('www.google.sk', function() {
-//         this.echo('KONTROLA -> google.sk');
-//         console.log('KONTROLA -> google.sk');
-//     });
-// });
-
-// casper.run();
-
-app.use(express.static(__dirname + '/public'));
-
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
-
-app.get('/', function(request, response) {
-  response.render('pages/index')
+casper.then(function() {
+    this.thenOpen('www.google.sk', function() {
+        this.echo('KONTROLA -> google.sk');
+        console.log('KONTROLA -> google.sk');
+    });
 });
 
-app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
-});
+casper.run();
