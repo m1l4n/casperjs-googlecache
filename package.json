@@ -10,6 +10,10 @@
     "ejs": "^2.3.1",
     "express": "~4.9.x"
   },
+  "devDependencies": {
+    "phantomjs": "2.0",
+    "casperjs": "^1.1.0-beta3"
+  }
   "engines": {
     "node": "0.12.2"
   },
