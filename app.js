@@ -39,14 +39,16 @@ var spooky = new Spooky({
             throw e;
         }
 
-        spooky.start();
+        spooky.start('www.google.sk');
         spooky.then(function () {
             this.emit('hello', 'Hello, from ' + this.evaluate(function () {
                 return document.title;
             }));
         });
         spooky.then(function() {
-            this.emit('test');
+            this.thenOpen('en.wikipedia.org/wiki/Spooky_the_Tuff_Little_Ghost', function() {
+                console.log('Otvorena stranka');
+            });
         });
         spooky.run();
     });
@@ -63,9 +65,9 @@ spooky.on('error', function (e, stack) {
 // Uncomment this block to see all of the things Casper has to say.
 // There are a lot.
 // He has opinions.
-spooky.on('console', function (line) {
-    console.log(line);
-});
+// spooky.on('console', function (line) {
+//     console.log(line);
+// });
 
 
 spooky.on('hello', function (greeting) {
