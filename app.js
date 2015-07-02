@@ -41,15 +41,18 @@ var spooky = new Spooky({
 
         spooky.start();
         spooky.then(function () {
+            this.emit('hello', 'Hello, from ' + this.evaluate(function () {
+                return document.title;
+            }));
+        });
+        spooky.then(function() {
             this.thenOpen('http://en.wikipedia.org/wiki/Spooky_the_Tuff_Little_Ghost', function() {
                 console.log('Otvorena stranka');
+                return 'aa';
                 if (this.exists('#google-cache-hdr')) {
                     console.log(this.getHTML('#google-cache-hdr > div:first-child').replace(/(<([^>]+)>)/ig,""));
                 }
             });
-            this.emit('hello', 'Hello, from ' + this.evaluate(function () {
-                return document.title;
-            }));
         });
         spooky.run();
     });
