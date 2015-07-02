@@ -46,9 +46,7 @@ var spooky = new Spooky({
             }));
         });
         spooky.then(function() {
-            this.thenOpen('en.wikipedia.org/wiki/Spooky_the_Tuff_Little_Ghost', function() {
-                console.log('Otvorena stranka');
-            });
+            this.emit('test');
         });
         spooky.run();
     });
@@ -76,7 +74,7 @@ spooky.on('hello', function (greeting) {
 
 spooky.on('test', function () {
     console.log('Spustam test');
-    this.thenOpen('en.wikipedia.org/wiki/Spooky_the_Tuff_Little_Ghost', function() {
+    this.open('en.wikipedia.org/wiki/Spooky_the_Tuff_Little_Ghost', function() {
         console.log('Otvorena stranka');
         if (this.exists('#google-cache-hdr')) {
             console.log(this.getHTML('#google-cache-hdr > div:first-child').replace(/(<([^>]+)>)/ig,""));
