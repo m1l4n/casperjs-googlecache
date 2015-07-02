@@ -43,9 +43,9 @@ var spooky = new Spooky({
             'http://en.wikipedia.org/wiki/Spooky_the_Tuff_Little_Ghost');
         spooky.then(function () {
             this.thenOpen('http://webcache.googleusercontent.com/search?q=cache%3Awww.google.sk', function() {
-                this.echo('Otvorena stranka');
+                console.log('Otvorena stranka');
                 if (this.exists('#google-cache-hdr')) {
-                    this.echo(this.getHTML('#google-cache-hdr > div:first-child').replace(/(<([^>]+)>)/ig,""));
+                    console.log(this.getHTML('#google-cache-hdr > div:first-child').replace(/(<([^>]+)>)/ig,""));
                 }
             });
             this.emit('hello', 'Hello, from ' + this.evaluate(function () {
