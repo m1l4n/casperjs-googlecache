@@ -1,4 +1,3 @@
-var require = patchRequire(require);
 var express = require('express');
 var app = express();
 
