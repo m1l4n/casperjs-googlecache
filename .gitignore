@@ -1,0 +1,10 @@
+# configuration files
+/.htaccess
+/.npm-debug.log
+errors_log.log
+includes/db_config.php
+database/config.php
+sftp-config.json
+todo
+empty
+node_modules/*/*
