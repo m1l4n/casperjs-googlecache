@@ -26,13 +26,13 @@ try {
 }
 
 var spooky = new Spooky({
-        // child: {
-        //     transport: 'http'
-        // },
-        // casper: {
-        //     logLevel: 'debug',
-        //     verbose: true
-        // }
+        child: {
+            transport: 'http'
+        },
+        casper: {
+            logLevel: 'debug',
+            verbose: true
+        }
     }, function (err) {
         if (err) {
             e = new Error('Failed to initialize SpookyJS');
